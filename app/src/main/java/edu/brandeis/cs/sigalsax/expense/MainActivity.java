@@ -20,6 +20,7 @@ import java.util.Arrays;
 
 public class MainActivity extends AppCompatActivity {
     private ListView listView;
+//    int count;
     int icon [] = {R.drawable.one,R.drawable.two,R.drawable.three,R.drawable.four, R.drawable.five};
     String numbers[] ={"ONE", "TWO", "THREE", "FOUR", "FIVE"};
     static final String EXTRA_ARRAY = "com.package.app.STRARRAY";
@@ -85,6 +86,8 @@ public class MainActivity extends AppCompatActivity {
                 String returnExpense = data.getStringExtra("expense");
                 String returnNote= data.getStringExtra("notes");
                 expenseLog.add(new ExpenseLogEntryData(returnExpense+"\n", returnNote));
+                //count++;
+//                System.out.println(count);
                 adapter.notifyDataSetChanged();
 
             }
